@@ -1,7 +1,7 @@
-import logoImage from "./assets/logo.svg";
-import "./App.css";
+import logoImage from "../../assets/logo.svg";
+import "../../App.css";
 
-function App() {
+export function Home() {
   return (
     <main id="page">
       <div>
@@ -31,4 +31,3 @@ function App() {
   );
 }
 
-export default App;

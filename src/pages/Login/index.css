@@ -12,6 +12,8 @@
   line-height: 38px;
   color: var(--color-white);
   margin: 84px 0 48px;
+  font-family: Roboto;
+  font-weight: bold;
 }
 
 #login input,
@@ -22,6 +24,7 @@
   line-height: 16px;
   padding: 20px 16px;
   border-radius: 16px;
+
 }
 
 #login input {
@@ -36,4 +39,5 @@
   margin-top: 48px;
   background-color: var(--color-white);
   cursor: pointer;
+  color: var(--color-dark-main);
 }

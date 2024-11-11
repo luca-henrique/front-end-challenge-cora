@@ -5,6 +5,13 @@ const bodyParser = require("body-parser");
 
 const port = 3000;
 const app = express();
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use(bodyParser.json());
 
@@ -24,7 +31,9 @@ app.post("/auth", (req, res) => {
 });
 
 app.get("/list", (req, res) => {
-  const token = req.headers.token;
+  const token = req.headers.authorization;
+
+  console.log(req.headers);
 
   if (!token || token === user.token) return res.sendStatus(401);
 

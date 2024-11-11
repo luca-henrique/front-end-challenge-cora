@@ -1,4 +1,6 @@
-export const TODO_LIST = [
+import { TaskProps } from "../types/task";
+
+export const TODO_LIST: TaskProps[] = [
   {
     id: "5ce31291-d06b-4940-9d14-0f41d116fe76",
     ref: "1",
