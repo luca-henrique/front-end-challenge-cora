@@ -1,12 +1,16 @@
 ## Tarefas [07/11/2024]
 
-- [] Criar repositorio para o projeto
-- [] Absolut path
-- [] Configurar react-router-dom
-- [] Separar as paginas
-- [] Organizar os components
+- [x] Criar repositorio para o projeto
 - [] Organizar ordem de importacoes
+- [] Adicionar husky
+- [] Absolut path
 - [x] instalacao cors no back
 - [x] ajuste no token
 - [x] Na pagina de TODO problema de rerender no useEffect por conta das dependencias search, items
-- [] criado interceptors do axios
+- [x] criado interceptors do axios
+
+## Tarefas [11/11/2024]
+
+- [] adicionar module federation
+- [] criar rotas privadas
+- [] adicionar storybook
