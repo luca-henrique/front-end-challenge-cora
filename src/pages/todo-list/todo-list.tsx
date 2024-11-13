@@ -10,7 +10,7 @@ import "./index.css";
 import { StatusProps } from "../../types/status";
 
 
-export function Todo() {
+export default function Todo() {
   const [items, setItems] = useState(TODO_LIST);
   const [searchInputValue, setSearchInputValue] = useState("");
   const [search, setSearch] = useState("");

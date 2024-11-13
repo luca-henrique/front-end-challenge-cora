@@ -1,5 +1,5 @@
 
-import logoImage from "../../../assets/logo.svg";
+import logoImage from "../../../assets/images/logo.svg";
 
 export const HeaderTodo = () => {
   return (

@@ -5,8 +5,18 @@
         {
           "id": "abc123def456ghi789",
           "description": "Compra de produtos eletrônicos",
-          "label": "Compra aprovada",
+          "label": "Recebimentos por Pix ou TED",
           "entry": "DEBIT",
+          "amount": 150000,
+          "name": "João da Silva",
+          "dateEvent": "2024-02-01T08:15:17Z",
+          "status": "COMPLETED"
+        },
+        {
+          "id": "abc123def45we23dhi789",
+          "description": "Supermercado Ana Rosa",
+          "label": "Estornos",
+          "entry": "CASHBACK",
           "amount": 150000,
           "name": "João da Silva",
           "dateEvent": "2024-02-01T08:15:17Z",
@@ -18,48 +28,68 @@
     {
       "items": [
         {
-          "id": "uvw987rst654xyz321",
-          "description": "Assinatura mensal",
-          "label": "Débito automático",
+          "id": "uvw934234234e",
+          "description": "Breiv Industries Associates Arcoverde Pernambuco",
+          "label": "Recebimentos por Pix ou TED",
           "entry": "DEBIT",
           "amount": 2990,
+          "name": "Empresa XYZ",
+          "dateEvent": "2024-01-11T14:47:46Z",
+          "status": "COMPLETED"
+        },
+        {
+          "id": "uvw987rs443321",
+          "description": "Thahise  - Consultoria Design",
+          "label": "Pagamento por boleto",
+          "entry": "INVOICE",
+          "amount": 2990,
+          "name": "Empresa XYZ",
+          "dateEvent": "2024-01-11T14:47:46Z",
+          "status": "COMPLETED"
+        },
+        {
+          "id": "uvw987rst654xyz321",
+          "description": "Supermercado Ana Rosa",
+          "label": "Estornos",
+          "entry": "CASHBACK",
+          "amount": 2990,
+          "name": "Empresa XYZ",
+          "dateEvent": "2024-01-11T14:47:46Z",
+          "status": "COMPLETED"
+        },
+        {
+          "id": "uvw987544yz321",
+          "description": "Thahise  - Consultoria Design",
+          "label": "Estornos",
+          "entry": "CASHBACK",
+          "amount": 2990,
+          "name": "Empresa XYZ",
+          "dateEvent": "2024-01-11T14:47:46Z",
+          "status": "COMPLETED"
+        },
+        {
+          "id": "uvw987rst234xyz321",
+          "description": "Supermercado Ana Rosa",
+          "label": "Recebimentos por boleto",
+          "entry": "INVOICE",
+          "amount": 2990,
+          "name": "Empresa XYZ",
+          "dateEvent": "2024-01-11T14:47:46Z",
+          "status": "COMPLETED"
+        },
+        {
+          "id": "uvw98723654xyz321",
+          "description": "Breiv Industries Associates Arcoverde Pernambuco",
+          "label": "Recebimentos por Pix ou TED",
+          "entry": "DEBIT",
+          "amount": 22320893.9,
           "name": "Empresa XYZ",
           "dateEvent": "2024-01-11T14:47:46Z",
           "status": "COMPLETED"
         }
       ],
       "date": "2024-01-11"
-    },
-    {
-      "items": [
-        {
-          "id": "mno123pqr456stu789",
-          "description": "Reembolso de despesas",
-          "label": "Transferência recebida",
-          "entry": "CREDIT",
-          "amount": 4500,
-          "name": "Empresa ABC",
-          "dateEvent": "2023-12-11T16:13:24Z",
-          "status": "COMPLETED"
-        }
-      ],
-      "date": "2023-12-11"
-    },
-    {
-      "items": [
-        {
-          "id": "def456ghi123jkl789",
-          "description": "Pagamento de serviço",
-          "label": "Pagamento efetuado",
-          "entry": "DEBIT",
-          "amount": 7000,
-          "name": "Empresa XYZ",
-          "dateEvent": "2023-10-15T18:10:21Z",
-          "status": "COMPLETED"
-        }
-      ],
-      "date": "2023-10-15"
     }
   ],
-  "itemsTotal": 4
+  "itemsTotal": 8
 }

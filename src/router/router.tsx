@@ -1,33 +1,40 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { Home } from "../pages/Home/Home";
-import { Login } from "../pages/Login";
-import { Todo } from "../pages/Todo";
-import { TransectionList } from "../pages/TransectionList/transection-list";
+import { lazy, Suspense } from "react";
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/todo",
-    element: <Todo />,
-  },
+const Home = lazy(() => import("../pages/home/home"));
+const TodoList = lazy(() => import("../pages/todo-list/todo-list"));
+const Login = lazy(() => import("../pages/login/login"));
+const Transactions = lazy(() => import("../pages/transactions/transactions"));
 
-  {
-    path: "/transacoes",
-    element: <TransectionList />,
-  },
+import { PrivateRoute } from "../components/atoms/private-route/private-route";
+import { useStore } from "../store/auth";
 
-]);
+export const MainRouter = () => {
+  const isAuth = useStore((state) => state.token);
 
-
-export const Router = () => <RouterProvider router={router} />
+  return (
+    <Suspense fallback={<div>Page is Loading...</div>}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/login"
+            element={
+              <Login />
+            }
+          />
+          <Route path="/todo" element={<TodoList />} />
+          <Route
+            path="/transacoes"
+            element={
+              <PrivateRoute isAuthenticated={!!isAuth}>
+                <Transactions />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </Router>
+    </Suspense>
+  );
+};

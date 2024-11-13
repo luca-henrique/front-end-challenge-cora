@@ -1,11 +1,12 @@
-import logoImage from "../../assets/logo.svg";
-import "../../App.css";
+import logoImage from "../../assets/images/logo.svg";
+import "./index.css";
+import { Link } from "react-router-dom";
 
-export function Home() {
+export default function Home() {
   return (
     <main id="page">
       <div>
-        <img src={logoImage} alt="Cora" title="Cora"></img>
+        <img src={logoImage} alt="Cora" title="Cora" />
         <h1>Hey There &#128075;</h1>
         <h2>Tenha um ótimo teste!!!</h2>
         <p>
@@ -20,10 +21,10 @@ export function Home() {
         </p>
         <ul className="buttons">
           <li>
-            <a href="#">TO-DO LIST</a>
+            <Link to="/todo">TO-DO LIST</Link>
           </li>
           <li>
-            <a href="#">IBANKING</a>
+            <Link to="/login">IBANKING</Link>
           </li>
         </ul>
       </div>
