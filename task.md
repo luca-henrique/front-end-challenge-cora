@@ -9,13 +9,14 @@
 ## Tarefas [11/11/2024]
 
 - [x] organizar css
-- [] transformar svg em components
-- [] adicionar biblioteca de traducao
+- [x] transformar svg em components
 - [x] arrumar redirect da home
-- [] adicionar biblioteca de traducao
 - [x] criar rotas privadas
+
+## Tarefas [15/11/2024]
+
+- [] adicionar husky
 - [] adicionar storybook
 - [] organizar ordem de importacoes
-- [] adicionar husky
 - [] absolut path
-- [] transformar icons em components
+- [] rodar sonarqube na aplicação
