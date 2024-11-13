@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+interface ButtonProps {
+  background?: string;
+  color?: string;
+}
+
+export const Button = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   cursor: pointer;
