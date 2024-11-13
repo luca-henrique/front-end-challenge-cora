@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-const Home = lazy(() => import("../pages/home/home"));
+const Home = lazy(() => import("../pages/home-page/home"));
 const TodoList = lazy(() => import("../pages/todo-list/todo-list"));
 const Login = lazy(() => import("../pages/login/login"));
 const Transactions = lazy(() => import("../pages/transactions/transactions"));
