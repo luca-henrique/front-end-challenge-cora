@@ -15,7 +15,7 @@
 
 ## Tarefas [15/11/2024]
 
-- [] adicionar husky
+- [x] adicionar Commitlint, Husky e Commitizen
 - [] adicionar storybook
 - [] organizar ordem de importacoes
 - [] absolut path
