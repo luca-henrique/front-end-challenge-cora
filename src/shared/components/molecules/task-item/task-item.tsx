@@ -1,6 +1,6 @@
-import { TaskProps } from "../../../types/task";
-import { ButtonDeleteItem } from "../../../features/todo-list-delete-item/ui/todo-list-delete-item";
-import { ButtonToggleStatusTodo } from "../../../features/todo-list-status-toggle/ui/button-toggle-status-todo-task-item";
+import { TaskProps } from "../../../../types/task";
+import { ButtonDeleteItem } from "../../../../features/todo-list-delete-item/ui/todo-list-delete-item";
+import { ButtonToggleStatusTodo } from "../../../../features/todo-list-status-toggle/ui/button-toggle-status-todo-task-item";
 
 
 interface TaskItemProps {

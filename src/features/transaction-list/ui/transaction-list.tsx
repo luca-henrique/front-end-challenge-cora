@@ -1,5 +1,4 @@
-import { Box } from "../../../components/molecules/box/box.body"
-import { TransactionGroupProps } from "../../../pages/transactions/transactions.view"
+import { Box, TransactionGroupProps } from "../../../shared/components/molecules/box/box.body"
 import { useTransactionList } from "../model/use-transaction-list"
 
 export const TransactionList = () => {

@@ -1,11 +1,11 @@
-import logoFullImage from "../../../assets/images/logo-full.svg";
+import logoFullImage from "../../../shared/assets/images/logo-full.svg";
 
 import { Icon } from "../../../shared/assets/icons";
-import { Input } from "../../../components/atoms/input/input";
+import { Input } from "../../../shared/components/atoms/input/input";
 import { Form, Title, Image, CustomButton } from "./style";
 import { documentMask } from "../../../shared/utils/document-mask";
 import { useLoginModel } from "../model/login.model";
-import { Separator } from "../../../components/atoms/separator/separator";
+import { Separator } from "../../../shared/components/atoms/separator/separator";
 
 export const LoginView = () => {
   const {

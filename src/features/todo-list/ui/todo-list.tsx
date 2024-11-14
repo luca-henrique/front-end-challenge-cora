@@ -1,4 +1,4 @@
-import { TaskItem } from "../../../components/molecules/task-item/task-item";
+import { TaskItem } from "../../../shared/components/molecules/task-item/task-item";
 import { useTodoList } from "../model/use-todo-list"
 
 export const TodoList = () => {

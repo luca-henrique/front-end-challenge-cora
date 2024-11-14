@@ -1,4 +1,4 @@
-import { SwitchButton } from "../../../components/atoms/switch-button/switch-button"
+import { SwitchButton } from "../../../shared/components/atoms/switch-button/switch-button"
 import { useTransactionFilter } from "../model/use-transaction-filter"
 import { Header } from "./style"
 

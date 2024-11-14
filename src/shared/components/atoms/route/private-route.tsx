@@ -9,3 +9,9 @@ interface PrivateRouteProps {
 export const PrivateRoute = ({ children, isAuthenticated = false }: PrivateRouteProps) => {
   return isAuthenticated ? children : <Navigate to="/login" />;
 }
+
+
+export const PublicRoute = ({ children, isAuthenticated = false }: PrivateRouteProps) => {
+  return !isAuthenticated ? children : <Navigate to="/transacoes" />;
+}
+
