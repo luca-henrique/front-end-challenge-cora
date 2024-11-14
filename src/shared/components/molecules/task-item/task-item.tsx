@@ -31,7 +31,7 @@ export const TaskItem = ({
         {links && links.length > 0 && (
           <div className="todo__links">
             {links.map((link) => (
-              <a key={link.name} target="_blank" href={link.url || link.link}>
+              <a key={link.name} target="_blank" href={link.url ?? link.link}>
                 {link.name}
               </a>
             ))}

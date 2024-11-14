@@ -1,5 +1,5 @@
 
-import { useLogout } from "../model/useLogout";
+import { useLogout } from "../model/use-logout";
 import { CustomButton } from "./style";
 
 export const Logout = () => {

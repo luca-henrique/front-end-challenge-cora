@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { createContext, useState } from 'react';
+import React, { createContext, useMemo, useState } from 'react';
 import api from "../../shared/services/axios";
 import { ButtonVariant } from '../../shared/components/atoms/switch-button/switch-button';
 import { TransactionGroupProps } from '../../pages/transactions/transactions';
@@ -51,16 +51,26 @@ export function TransactionsProvider({ children }: PaymentMethodProviderProps) {
   const changeVariantByFilterSelected = (value: string) => filterSelected === value ? "containedPrimary" : "containedSecondary"
 
 
+  const contextValue = useMemo(
+    () => ({
+      data: filteredResults,
+      isLoading,
+      error,
+      changeVariantByFilterSelected,
+      selectOptionFilter
+    }),
+    [
+      filteredResults,
+      isLoading,
+      error,
+      changeVariantByFilterSelected,
+      selectOptionFilter]
+  );
+
+
   return (
     <TransactionProvider.Provider
-      value={{
-        data: filteredResults,
-        isLoading,
-        error,
-        changeVariantByFilterSelected,
-        selectOptionFilter
-
-      }}>
+      value={contextValue}>
       {children}
     </TransactionProvider.Provider>
   );

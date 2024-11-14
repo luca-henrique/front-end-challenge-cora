@@ -1,14 +1,10 @@
-interface ITable{
-
-  className?:string
-  name?: string
-  children:React.ReactNode
+interface ITable {
+  className?: string
+  children: React.ReactNode
 }
 
-
-
-export const Table = ({className, children}:ITable) =>{
-  return(
+export const Table = ({ className, children }: ITable) => {
+  return (
     <table className={`${className}`}>
       {children}
     </table>

@@ -1,6 +1,6 @@
 import { TaskProps } from '../../types/task';
 import { TODO_LIST } from '../../shared/mocks/todos';
-import React, { ChangeEvent, createContext, FormEvent, useState } from 'react';
+import React, { ChangeEvent, createContext, FormEvent, useMemo, useState } from 'react';
 import { StatusProps } from '../../types/status';
 
 
@@ -58,16 +58,27 @@ export function TodoListProvider({ children }: PaymentMethodProviderProps) {
   }
 
 
+  const contextValue = useMemo(
+    () => ({
+      data: items,
+      deleteItem,
+      toggleStatus,
+      handleChangeValueSearch,
+      handleSubmitSearch,
+      search
+    }),
+    [items,
+      deleteItem,
+      toggleStatus,
+      handleChangeValueSearch,
+      handleSubmitSearch,
+      search]
+  );
+
+
   return (
     <TodoListContext.Provider
-      value={{
-        data: items,
-        deleteItem,
-        toggleStatus,
-        handleChangeValueSearch,
-        handleSubmitSearch,
-        search
-      }}>
+      value={contextValue}>
       {children}
     </TodoListContext.Provider>
   );

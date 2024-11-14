@@ -1,10 +1,9 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 interface SeparatorProps {
-  height: number
+  height: number;
 }
 
 export const Separator = styled.div<SeparatorProps>`
-  margin: ${({ height }) =>
-    height ? height : 1}px;
-`
+  margin: ${({ height }) => height ?? 1}px;
+`;

@@ -11,7 +11,7 @@ export const Input = ({ errorMesssage, ...props }: CustomInputProps) => {
   return (
     <Container>
       <StyledInput {...props} />
-      <ErroLabel >{errorMesssage && errorMesssage}</ErroLabel>
+      <ErroLabel >{errorMesssage ?? errorMesssage}</ErroLabel>
     </Container>
   )
 }

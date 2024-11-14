@@ -6,12 +6,12 @@ const CPF_MIN_LENGTH = 11;
 export const LoginSchema = z.object({
   cpf: z
     .string({ required_error: "CPF/CNPJ é obrigatório." })
-    .refine((doc) => {
+    .refine((doc: any) => {
       const cleanedDoc = doc.replace(/\D/g, "");
       return cleanedDoc.length >= CPF_MIN_LENGTH;
     }, `CPF deve conter no mínimo ${CPF_MIN_LENGTH} caracteres.`)
     .refine(
-      (doc) => {
+      (doc: any) => {
         return isValidCpf(doc);
       },
       { message: "CPF inválido" }

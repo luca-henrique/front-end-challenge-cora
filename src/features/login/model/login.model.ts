@@ -9,9 +9,15 @@ import {
   FieldTypeSignInScreenSchema,
   LoginSchemaType,
 } from "../../../entities/login/types/type";
+import { useAuthStore } from "../../../app/store/use-auth-store";
 
 export const useLoginModel = () => {
   const notifySuccess = () => toast.success("Wow so easy !");
+  const signIn = useAuthStore((state) => state.login);
+
+  const token = useAuthStore((state) => state.token);
+
+  console.log(token);
 
   const navigation = useNavigate();
 
@@ -41,6 +47,7 @@ export const useLoginModel = () => {
     },
     onSuccess: (data) => {
       localStorage.setItem("token", data.data.token);
+      signIn(data.data.token);
       notifySuccess();
     },
     onError: () => toast.error("Wow so easy !"),

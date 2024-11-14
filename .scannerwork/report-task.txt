@@ -1,0 +1,6 @@
+projectKey=front-end-challenge-cora
+serverUrl=http://localhost:8082
+serverVersion=10.7.0.96327
+dashboardUrl=http://localhost:8082/dashboard?id=front-end-challenge-cora
+ceTaskId=0e7e6b90-77a1-4582-9d6c-654bf6fa228a
+ceTaskUrl=http://localhost:8082/api/ce/task?id=0e7e6b90-77a1-4582-9d6c-654bf6fa228a

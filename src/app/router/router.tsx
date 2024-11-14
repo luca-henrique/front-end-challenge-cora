@@ -12,10 +12,9 @@ const Transactions = lazy(
 import {
   PrivateRoute,
 } from "../../shared/components/atoms/route/private-route";
-import { useAuthStore } from "../store/use-auth-store";
+
 
 export const MainRouter = () => {
-  const isAuth = useAuthStore((state) => state.token);
 
   return (
     <Suspense fallback={<div>Page is Loading...</div>}>
@@ -43,7 +42,7 @@ export const MainRouter = () => {
           <Route
             path="/transacoes"
             element={
-              <PrivateRoute isAuthenticated={!!isAuth}>
+              <PrivateRoute>
                 <Transactions />
               </PrivateRoute>
             }

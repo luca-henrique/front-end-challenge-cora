@@ -5,7 +5,7 @@ import {
 import { Container, Header } from "./style";
 import { TransactionFilter } from "../../features/transaction-filter/ui/transaction-filter";
 import { TransactionsProvider } from "../../app/provider/transaction-provider";
-import { Logout } from "../../features/logout/ui/login";
+import { Logout } from "../../features/logout/ui/logout";
 
 export interface TransactionGroupProps {
   items: TransactionItemProps[];
