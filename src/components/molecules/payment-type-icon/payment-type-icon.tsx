@@ -1,4 +1,4 @@
-import { Icon } from "../../../assets/icons";
+import { Icon } from "../../../shared/assets/icons";
 
 export type PaymentType = 'DEBIT' | 'CASHBACK' | 'INVOICE';
 

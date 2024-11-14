@@ -1,6 +1,6 @@
 import logoFullImage from "../../../assets/images/logo-full.svg";
 
-import { Icon } from "../../../assets/icons";
+import { Icon } from "../../../shared/assets/icons";
 import { Input } from "../../../components/atoms/input/input";
 import { Form, Title, Image, CustomButton } from "./style";
 import { documentMask } from "../../../shared/utils/document-mask";
