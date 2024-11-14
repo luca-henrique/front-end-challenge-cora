@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { createContext, useState } from 'react';
-import api from "../../services/axios";
+import api from "../../shared/services/axios";
 import { ButtonVariant } from '../../shared/components/atoms/switch-button/switch-button';
 import { TransactionGroupProps } from '../../pages/transactions/transactions';
 

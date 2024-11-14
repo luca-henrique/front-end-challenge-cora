@@ -1,4 +1,4 @@
-import { LoginSchemaType } from "../pages/login/type";
+import { LoginSchemaType } from "../../pages/login/type";
 import api from "./axios";
 
 export const signInRequest = async (data: LoginSchemaType) => {

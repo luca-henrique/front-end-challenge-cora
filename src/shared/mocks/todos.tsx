@@ -1,4 +1,4 @@
-import { TaskProps } from "../types/task";
+import { TaskProps } from "../../types/task";
 
 export const TODO_LIST: TaskProps[] = [
   {

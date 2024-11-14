@@ -1,5 +1,5 @@
 import z from "zod";
-import { isValidCpf } from "../../validations/document";
+import { isValidCpf } from "../../shared/validations/document";
 
 const CPF_MIN_LENGTH = 11;
 

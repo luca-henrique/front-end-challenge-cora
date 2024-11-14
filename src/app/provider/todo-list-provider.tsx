@@ -1,5 +1,5 @@
 import { TaskProps } from '../../types/task';
-import { TODO_LIST } from '../../mocks/todos';
+import { TODO_LIST } from '../../shared/mocks/todos';
 import React, { ChangeEvent, createContext, FormEvent, useState } from 'react';
 import { StatusProps } from '../../types/status';
 

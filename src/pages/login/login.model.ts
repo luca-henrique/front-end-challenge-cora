@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { signInRequest } from "../../services/auth";
+import { signInRequest } from "../../shared/services/auth";
 
 export const useLoginModel = () => {
   const notifySuccess = () => toast.success("Wow so easy !");
