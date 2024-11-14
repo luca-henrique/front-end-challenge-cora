@@ -11,7 +11,6 @@ const Transactions = lazy(
 
 import {
   PrivateRoute,
-  PublicRoute,
 } from "../../shared/components/atoms/route/private-route";
 import { useAuthStore } from "../store/use-auth-store";
 

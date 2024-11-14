@@ -11,7 +11,5 @@ export const PrivateRoute = ({ children, isAuthenticated = false }: PrivateRoute
 }
 
 
-export const PublicRoute = ({ children, isAuthenticated = false }: PrivateRouteProps) => {
-  return !isAuthenticated ? children : <Navigate to="/transacoes" />;
-}
+
 
