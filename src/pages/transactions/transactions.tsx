@@ -2,9 +2,10 @@ import { TransactionList } from "../../features/transaction-list/ui/transaction-
 import {
   TransactionItemProps,
 } from "../../shared/components/molecules/box/box.body";
-import { Container } from "./style";
+import { Container, Header } from "./style";
 import { TransactionFilter } from "../../features/transaction-filter/ui/transaction-filter";
 import { TransactionsProvider } from "../../app/provider/transaction-provider";
+import { Logout } from "../../features/logout/ui/login";
 
 export interface TransactionGroupProps {
   items: TransactionItemProps[];
@@ -15,7 +16,10 @@ const Transactions = () => {
   return (
     <TransactionsProvider>
       <Container>
-        <TransactionFilter />
+        <Header>
+          <TransactionFilter />
+          <Logout />
+        </Header>
         <TransactionList />
       </Container>
     </TransactionsProvider>

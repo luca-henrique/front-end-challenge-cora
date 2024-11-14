@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Header = styled.header`
-  width: 62.5rem;
+export const Header = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 24px 0;
 `;

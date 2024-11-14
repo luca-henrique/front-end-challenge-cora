@@ -42,13 +42,13 @@ export const useLoginModel = () => {
     onSuccess: (data) => {
       localStorage.setItem("token", data.data.token);
       notifySuccess();
-      navigation("/transacoes");
     },
     onError: () => toast.error("Wow so easy !"),
   });
 
   const onSubmit = (data: LoginSchemaType) => {
     mutate(data);
+    navigation("/transacoes");
   };
 
   const { cpf, password } = watch();

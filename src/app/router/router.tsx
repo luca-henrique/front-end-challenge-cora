@@ -25,25 +25,20 @@ export const MainRouter = () => {
           <Route
             path="/"
             element={
-              <PublicRoute isAuthenticated={!!isAuth}>
-                <Home />
-              </PublicRoute>
+
+              <Home />
             }
           />
           <Route
             path="/login"
             element={
-              <PublicRoute isAuthenticated={!!isAuth}>
-                <Login />
-              </PublicRoute>
+              <Login />
             }
           />
           <Route
             path="/todo"
             element={
-              <PublicRoute isAuthenticated={!!isAuth}>
-                <TodoList />
-              </PublicRoute>
+              <TodoList />
             }
           />
           <Route
