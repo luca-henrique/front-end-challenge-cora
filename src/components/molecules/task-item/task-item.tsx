@@ -1,19 +1,20 @@
-import { StatusProps } from "../../../types/status";
 import { TaskProps } from "../../../types/task";
+import { ButtonDeleteItem } from "../../../features/todo-list-delete-item/ui/todo-list-delete-item";
+import { ButtonToggleStatusTodo } from "../../../features/todo-list-status-toggle/ui/button-toggle-status-todo-task-item";
+
 
 interface TaskItemProps {
-  handleChangeTaskStatus: (id: string, status: StatusProps) => void;
-  handleDeleteTask: (id: string) => void;
+
   item: TaskProps;
   taskIndex: number;
 }
 
 export const TaskItem = ({
   item,
-  handleDeleteTask,
-  handleChangeTaskStatus,
   taskIndex,
 }: TaskItemProps) => {
+
+
   const { required, title, status, description, links, id } = item;
   return (
     <li>
@@ -37,13 +38,13 @@ export const TaskItem = ({
           </div>
         )}
         <div className="todo__actions">
-          <button onClick={() => handleDeleteTask(id)}>delete</button>
-          <button onClick={() => handleChangeTaskStatus(id, status)}>
+          <ButtonDeleteItem id={id}>delete</ButtonDeleteItem>
+          <ButtonToggleStatusTodo id={id} status={status} >
             change to{" "}
             <strong>
               <u>{item.status === "done" ? "pending" : "done"}</u>
             </strong>
-          </button>
+          </ButtonToggleStatusTodo>
         </div>
       </div>
     </li>
