@@ -37,6 +37,7 @@ describe("useLoginModel", () => {
 
     await act(async () => {
       result.current.handleSubmitLoginForm({
+        //@ts-ignore
         cpf: "12345678900",
         password: "password123",
       });
@@ -58,6 +59,7 @@ describe("useLoginModel", () => {
 
     await act(async () => {
       result.current.handleSubmitLoginForm({
+        //@ts-ignore
         cpf: "12345678900",
         password: "wrongpassword",
       });
