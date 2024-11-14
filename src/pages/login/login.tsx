@@ -1,11 +1,7 @@
-
-import { useLoginModel } from "./login.model";
-import { LoginView } from "./login.view";
+import { LoginView } from "../../features/login/ui/login";
 
 export default function Login() {
-  const props = useLoginModel();
-
   return (
-    <LoginView {...props} />
+    <LoginView />
   );
 }

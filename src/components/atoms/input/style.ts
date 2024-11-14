@@ -14,3 +14,9 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
 `;
+
+export const ErroLabel = styled.label`
+  color: #fff;
+  height: 20px;
+  margin-top: 6px;
+`;
