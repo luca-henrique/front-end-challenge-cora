@@ -5,10 +5,3 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
-export const Header = styled.header`
-  width: 62.5rem;
-  display: flex;
-  flex-direction: row;
-  margin: 24px 0;
-`;

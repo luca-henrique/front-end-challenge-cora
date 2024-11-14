@@ -7,10 +7,10 @@ const variants = {
   containedSecondary: { background: '#F0F4F8', color: "#3B3B3B" }
 } as const;
 
-type Variant = keyof typeof variants;
+export type ButtonVariant = keyof typeof variants;
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: Variant
+  variant?: ButtonVariant
 }
 
 export const SwitchButton = ({ children, variant = 'containedPrimary', ...props }: ButtonProps) => {
