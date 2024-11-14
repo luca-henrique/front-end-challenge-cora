@@ -1,8 +1,9 @@
-import logoImage from "../../assets/images/logo.svg";
-import "./index.css";
+import logoImage from "../../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+import "./style.css";
+
+export const HomeInformation = () => {
   return (
     <main id="page">
       <div>

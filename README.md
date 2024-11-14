@@ -125,3 +125,9 @@ Agora o resto é com a gente. Vamos analisar o seu código e as decisões que vo
 # License
 
 MIT © [corabank](https://github.com/corabank)
+
+## read
+
+https://www.udemy.com/course/react-com-mango/learn/lecture/19615928#overview
+https://github.com/lint-staged/lint-staged
+https://github.com/viniciusbls9/react-tdd/

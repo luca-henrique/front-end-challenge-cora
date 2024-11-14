@@ -3,11 +3,16 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import { TODO_LIST } from "../../mocks/todos";
 
 import { TaskList } from "../../components/organisms/task-list/task-list";
-import { HeaderTodo } from "../../components/molecules/header-todo/header-todo";
 import { FormSearchTodo } from "../../components/molecules/form-search-todo/form-search-todo";
 
-import "./index.css";
 import { StatusProps } from "../../types/status";
+
+import { TodoListHeader } from "../../features/todo-list-header/ui/todo-list-header";
+
+import { TodoListProvider } from "../../app/provider/todo-list-provider";
+
+import "./index.css";
+
 
 
 export default function Todo() {
@@ -45,20 +50,22 @@ export default function Todo() {
       : items;
 
   return (
-    <main id="page" className="todo">
-      <HeaderTodo />
-      <div className="todo__wrapper">
-        <FormSearchTodo
-          handleSearch={handleSearch}
-          searchInputValue={searchInputValue}
-          handleChange={handleChange}
-        />
-        <TaskList
-          items={filteredTasks}
-          handleChangeTaskStatus={handleChangeTaskStatus}
-          handleDeleteTask={handleDeleteTask}
-        />
-      </div>
-    </main>
+    <TodoListProvider>
+      <main id="page" className="todo">
+        <TodoListHeader />
+        <div className="todo__wrapper">
+          <FormSearchTodo
+            handleSearch={handleSearch}
+            searchInputValue={searchInputValue}
+            handleChange={handleChange}
+          />
+          <TaskList
+            items={filteredTasks}
+            handleChangeTaskStatus={handleChangeTaskStatus}
+            handleDeleteTask={handleDeleteTask}
+          />
+        </div>
+      </main>
+    </TodoListProvider>
   );
 }
