@@ -1,6 +1,10 @@
-import { TransactionItemProps } from "../../components/molecules/box/box.body";
-import { useTransactionModel } from "./transactions.model";
-import { TransactionsView } from "./transactions.view";
+import { TransactionList } from "../../features/transaction-list/ui/transaction-list";
+import {
+  TransactionItemProps,
+} from "../../shared/components/molecules/box/box.body";
+import { Container } from "./style";
+import { TransactionFilter } from "../../features/transaction-filter/ui/transaction-filter";
+import { TransactionsProvider } from "../../app/provider/transaction-provider";
 
 export interface TransactionGroupProps {
   items: TransactionItemProps[];
@@ -8,11 +12,15 @@ export interface TransactionGroupProps {
 }
 
 const Transactions = () => {
-  const props = useTransactionModel();
-
   return (
-    <TransactionsView {...props} />
+    <TransactionsProvider>
+      <Container>
+        <TransactionFilter />
+        <TransactionList />
+      </Container>
+    </TransactionsProvider>
   );
 };
 
-export default Transactions;
+
+export default Transactions

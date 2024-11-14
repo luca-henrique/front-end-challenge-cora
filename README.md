@@ -1,127 +1,123 @@
-### <img src="https://github.com/corabank/frontend-case/blob/16051123b026faaba02e6d0959fe471a6a6dac2a/src/assets/logo.svg" alt="Cora" title="Cora" width="50" />
+# <img src="https://github.com/corabank/frontend-case/blob/16051123b026faaba02e6d0959fe471a6a6dac2a/src/assets/logo.svg" alt="Cora" title="Cora" width="50" /> Frontend Challenge
 
-### Frontend Teste
+## 📑 Índice
 
-Teste para vagas de frontend da [Cora](https://www.cora.com.br) :heartbeat:
-<br />
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Tecnologias](#-tecnologias)
+- [Arquitetura](#-arquitetura)
+  - [Portas Utilizadas](#portas-utilizadas)
+- [Como Começar](#-como-começar)
+  - [Credenciais para Teste](#credenciais-para-teste)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Boas Práticas](#-boas-práticas)
+- [Processo de Desenvolvimento](#-processo-de-desenvolvimento)
+  - [Workflow](#workflow)
+  - [Commits](#commits)
+- [Considerações Técnicas e de Segurança](#-considerações-técnicas-e-de-segurança)
+  - [Ambiente de Desenvolvimento](#ambiente-de-desenvolvimento)
+  - [Ambiente de Produção](#ambiente-de-produção)
+- [Práticas de Equipe](#-práticas-de-equipe)
+- [Licença](#-licença)
 
-# Quick Menu
+## 📋 Sobre o Projeto
 
-- [Hey There](#hey-there-wave)
-  - [Principais tarefas](#principais-tarefas)
-- [Como começar](#como-começar)
-- [Contratos com APIs](#contratos-com-apis)
-  - [Auth](#auth)
-  - [List](#list)
-- [Como entregar](#como-entregar)
-  - [Entreguei, e agora?](enteguei-e-agora)
-- [License](#license)
+Este projeto é uma aplicação bancária desenvolvida como parte do processo seletivo da Cora. A aplicação implementa:
 
-# Hey There :wave:
+- Sistema de autenticação
+- Dashboard bancário
+- Listagem de transações
+- Interface responsiva e acessível
 
-Neste teste, gostaríamos que você simulasse a criação e manutenção de um projeto real e aplicasse todas as práticas e técnicas que você considera importantes em um projeto frontend.
+## 🚀 Tecnologias
 
-O objetivo deste teste é avaliar sua capacidade de desenvolver interfaces web. Você será responsável por resolver bugs, efetuar melhorias, implementar funcionalidades e desenvolver **uma** nova página de acordo com as especificações fornecidas.
+- **React 18** - Framework principal
+- **TypeScript** - Tipagem estática
+- **Vite** - Build tool e dev server
+- **Zustand** - Gerenciamento de estado
+- **React Router** - Roteamento
+- **Axios** - Cliente HTTP
+- **Express** - Backend mockado
+- **React Hook Form** - Formulario
+- **Zod** - validação de formularios
 
-**Info**: Você é livre (📚🧦) para fazer alterações no projeto, sinta-se em casa.
+## 🏗 Arquitetura
 
-## Principais tarefas
+O projeto utiliza uma arquitetura Feature-Sliced Design, organizada da seguinte forma:
 
-1. Resolução de Problemas: Você será desafiado a identificar e corrigir possíveis erros e problemas relacionados à interface em páginas já existentes. Isso envolve a depuração de código, a correção de erros de exibição e a garantia de que todas as funcionalidades estejam funcionando corretamente.
+```
+📦 cora-frontend-case
+ ┣ 📂 src
+ ┃ ┣ 📂 app
+ ┃ ┃ ┣ 📂 config
+ ┃ ┃ ┣ 📂 provider
+ ┃ ┃ ┣ 📂 router
+ ┃ ┃ ┣ 📂 styles
+ ┃ ┃ ┗ 📂 router
+ ┃ ┃
+ ┣ ┣ 📂 entities
+ ┃ ┃  ┗ 📂 login
+ ┃ ┣ 📂 fetures
+ ┃ ┃  ┣ 📂 login
+ ┃ ┃  ┃  ┣ 📂 ui
+ ┃ ┃  ┃  ┣ 📂 model
+ ┃ ┃  ┃  ┗ 📂 api
+```
 
-2. Desenvolvimento de Páginas Novas: Você será responsável por desenvolver **uma** nova página para melhorar a experiência do usuário. Isso envolve a criação de layouts atraentes e a implementação de interações intuitivas e funcionais ([link do figma](https://www.figma.com/file/TXxt0VFxbzDoho4tmt9XPP/Teste_FrontWeb?type=design&node-id=0-1&mode=design)).
+### Portas Utilizadas
 
-3. Integração com APIs: Você será responsavel por todas as integrações com APIs, de acordo com os contratos fornecidos.
+- Backend API: 3000
+- Start: 5173
 
-# Como começar?
+## 🚦 Como Começar
 
-1. Faça o **fork** ou **clone** de projeto
-
-2. Instale as dependências
-
-3. Inicie o projeto com o comando:
-
-   ```bash
-   npm run dev
-   ```
-
-   **Info**: Esse comando vai rodar o client e o server. O server vai sempre rodar na porta `3000`, e o client possivelmente vai rodar na porta `5173` (o proprio `vite` que faz essa escolha, então fique atento ao seu terminal)
-
-   Se quiser conferir se o server esta rodando é só rodar o seguinte **cURL**:
-
-   ```bash
-   curl --location 'http://localhost:3000/health-check'
-   ```
-
-4. Agora é só seguir o passo a passo que vai aparecer no seu localhost (possivelmente na porta `5173`). Boa sorte :v:
-
-# Contratos com APIs.
-
-A `api` já é fornecida, e por ser em javascript você tem total poder de edição e manutenção dela no próprio projeto.
-
-## Auth
-
-cURL:
+1. Clone o repositório:
 
 ```bash
-curl --location 'http://localhost:3000/auth' \
---header 'Content-Type: application/json' \
---data '{
-    "cpf": "35819357833",
-    "password": "123456"
-}'
+git clone [url-do-repositorio]
 ```
 
-**Info**: O `cpf` e `password` são fixos, ou seja, são exatamente os mesmos que estão no **cURL** :)
-
-Response:
-
-```json
-{
-  "token": "$TOKEN"
-}
-```
-
-## List
-
-cURL:
+2. Instale as dependências:
 
 ```bash
-curl --location 'http://localhost:3000/list' \
---header 'token: $TOKEN'
+npm install
 ```
 
-Response Interface:
+3. Inicie o projeto:
 
-```ts
-interface IResponseList {
-  results: {
-    items: {
-      id: string;
-      description: string;
-      label: string;
-      entry: "DEBIT" | "CREDIT";
-      amount: number; //in cents
-      name: string;
-      dateEvent: string; //ex: 2024-01-11T14:47:46Z
-      status: string;
-    }[];
-    date: string; //ex: 2024-02-01
-  }[];
-  itemsTotal: number;
-}
+```bash
+npm run start
 ```
 
-# Como entregar
+### Credenciais para Teste
 
-Terminou o nosso teste? Acredita que o projeto já esta bem estruturado? Então nos envie o link do seu repositório do github.
+(aproveite para testar também com diferentes valores, mas os que vão funcionar são esses)
 
-## Entreguei, e agora?
+```
+CPF: 35819357833
+Senha: 123456
+```
 
-Agora o resto é com a gente. Vamos analisar o seu código e as decisões que você tomou, e partir disso, em equipe, vamos decidir quais os próximos passos.
+## ✨ Boas Práticas
 
-**Note**: Não se preocupe, sempre enviamos um feedback :)
+- **Clean Code**: Código limpo e autoexplicativo
+- **Conventional Commits**: Padronização de commits
+- **TypeScript**: Tipagem forte para maior segurança
+- **Component-Driven Development**: Componentização eficiente
+- **Error Handling**: Tratamento adequado de erros
+- **Performance**: Otimizações de carregamento e renderização
 
-# License
+### Commits
+
+Seguindo Conventional Commits:
+
+```
+feat: add new transaction list
+fix: correct authentication flow
+docs: update readme
+style: format code
+refactor: improve error handling
+```
+
+## 📄 Licença
 
 MIT © [corabank](https://github.com/corabank)
