@@ -31,7 +31,7 @@ export const LoginView = () => {
           }
           maxLength={14}
         />
-        <Separator height={14} />
+        <Separator height={4} />
         <Input
           placeholder="Digite sua senha"
           type="password"
@@ -41,7 +41,7 @@ export const LoginView = () => {
             handleChangeInputValue("password", event.target.value)
           }
         />
-        <Separator height={24} />
+        <Separator height={8} />
         <CustomButton disabled={isPending}>
           {isPending ? "Entrando..." : "Continuar"}
           <Icon.ArrowRight />
